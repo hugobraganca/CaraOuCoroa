@@ -20,6 +20,7 @@ export default class CaraOuCoroa extends Component {
         <View>
           <Image source={logo} />
           <Image source={btnJogar} />
+          <Text>Teste</Text>
         </View>
 
         <View>
