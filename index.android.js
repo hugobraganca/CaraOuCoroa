@@ -1,36 +1,23 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Image
-} from 'react-native';
+import { AppRegistry } from 'react-native';
+import { Router, Scene } from 'react-native-router-flux';
 
-
-const logo = require('./src/imgs/logo.png');
-const btnJogar = require('./src/imgs/botao_jogar.png');
-const btnOutrosJogos = require('.src/imgs/outros_jogos.png');
+import Principal from './src/components/Principal';
+import SobreJogo from './src/components/SobreJogo';
+import OutrosJogos from './src/components/OutrosJogos';
 
 export default class CaraOuCoroa extends Component {
   render() {
     return (
-      <View>
-        
-        <View>
-          <Image source={logo} />
-          <Image source={btnJogar} />
-          <Text>Teste</Text>
-        </View>
-
-        <View>
-          <Image source={btnOutrosJogos} />
-        </View>
-
-      </View>
+      <Router>
+        <Scene>
+          <Scene key='principal' component={Principal} initil title='Cara ou Coroa'/>
+          <Scene key='sobrejogo' component={SobreJogo} />
+          <Scene key='outrosjogos' component={OutrosJogos} />
+        </Scene>
+      </Router>
     );
   }
 }
-
 
 AppRegistry.registerComponent('CaraOuCoroa', () => CaraOuCoroa);
