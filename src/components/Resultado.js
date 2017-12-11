@@ -34,14 +34,12 @@ export default class Resultado extends Component {
                 </View>
                 
             );
-        } else if ( this.state.resultado === 'coroa') {
-            return(
-                <View style={styles.resultado}>
-                    <Image source={coroa} />
-                </View>
-                
-            );
-        }
+        } 
+        return(
+            <View style={styles.resultado}>
+                <Image source={coroa} />
+            </View>
+        );
         
     }
 }
